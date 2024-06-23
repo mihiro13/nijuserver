@@ -3,34 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niju Server</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+    <title>NIJU server</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>ようこそ、私のホームページへ！</h1>
+        <div class="header-title">Niju server</div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </header>
+    <nav class="side-menu" id="sideMenu">
+        <a href="index.html">Home</a>
+        <a href="wiki.html">Wiki</a>
+        <a href="admin.html">Admin</a>
+    </nav>
     <main>
-        <section>
-            <h2>自己紹介</h2>
-            <p>ここに自己紹介を書きます。</p>
-        </section>
-        <section>
-            <h2>趣味</h2>
-            <p>ここに趣味について書きます。</p>
+        <section id="intro">
+            <h1>Welcome to Niju server</h1>
+            <p>Discover the features of our server...</p>
+            <!-- More content and animations here -->
         </section>
     </main>
-    <footer>
-        <p>© 2024 私のホームページ</p>
-    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
