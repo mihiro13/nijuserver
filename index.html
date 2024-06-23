@@ -1,33 +1,68 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIJU server</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon.ico">
-</head>
-<body>
-    <header>
-
-        <div class="header-title">Niju server</div>
-    </header>
-    <div class="navbar">
-        <a href="#">Home</a>
-        <a href="about.html">About</a>
-        <a href="wiki.html">Wiki</a>
-        <a href="contact">Contact</a>
-    </div>
-    <main>
-        <section id="intro">
-            <h1>Welcome to Niju server</h1>
-            <p>Discover the features of our server...</p>
-            <!-- More content and animations here -->
-            <p>fake</p>
-            <p>fake2</p>
-            <p>fake3</p>
-        </section>
-    </main>
-    <script src="scripts.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Niju server</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/favicon.ico">
+        <script src="src/jquery-3.7.1.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/4f64a02f69.js"crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark webnav">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><image class="brand-logo" href="images/brand.png"> Niju Server</a>
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="wiki.html"><i class="fa-solid fa-book"></i> Wiki</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-user"></i> Contact</a></li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/rypNPn2cHh"><i class="fa-brands fa-discord"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="py-5 md-4 text-center">
+            <h1>Niju server</h1>
+        </div>
+            <div class="container mt-4">
+                <div><hr class="mt-0"></div>
+                <div class="display-5 pt-3">
+                    <h1>Worlds</h2>
+                </div>
+                    <div class="row mt-4 worlds">
+                        <div class="col-md">
+                            <div class="card">
+                            <img src="images/shuttlerun.png">
+                                <p class="h4 my-3 text-center">シャトルラン</p>
+                                <p class="mx-3">シャトルラン形式で、次々と出てくるアスレチックをクリアしていく、ギミック型のアスレチックです！アスレチックの難易度はどんどん上がって、難しくなっていきます！ハイスコア目指して、ぜひ挑戦しましょう！</p>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="card">
+                            <img src="images/nitaku.png">
+                                <p class="h4 my-3 text-center">二択クイズ</p>
+                                <p class="mx-3">出題者が出す２択の問題に対して、それ以外の人が回答していきます。問題のジャンルは出題者によって様々で、マイクラの問題から、マイナーなアニメの問題まで出ることもあります。</p>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="card">
+                            <img src="images/relay.png">
+                            <p class="h4 my-3 text-center">アスレリレー</p>
+                                <p class="mx-3">最大６対６に分かれて、リレー形式でアスレチックを行い、先にゴールへたどり着いたチームが勝ち、というゲームです。時には白熱の大接戦があることも...!?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
 </html>
