@@ -29,13 +29,14 @@ header {
 .hamburger-menu {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 21px;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .hamburger-menu div {
@@ -53,7 +54,7 @@ header {
 }
 
 .change .bar3 {
-   transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .side-menu {
@@ -67,6 +68,7 @@ header {
     transition: 0.5s;
     padding-top: 60px;
     border-right: 2px solid #000;
+    z-index: 1001;
 }
 
 .side-menu a {
@@ -168,4 +170,3 @@ body::before {
     padding: 10px;
     border: 1px solid #000;
 }
-
