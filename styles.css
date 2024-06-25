@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Mojangles";
+	src: url("fonts/mojangles.ttf") format("truetype");
+}
+
 html {
     height: 100%;
 }
@@ -6,6 +11,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     min-height: 100%;
+	padding-top: 70px;
 }
 
 li {
@@ -38,6 +44,12 @@ img{
     width: 60%;
 }
 
+.footer {
+	bottom: 0;
+	width: 100%;
+	height: 6rem;
+}
+
 @media screen and (max-width: 768px) {
 	.side-collapse-container{
 		width:100%;
@@ -60,4 +72,127 @@ img{
 	.side-collapse.in {
 		width:0;
 	}
+}
+
+.s-0 {
+	color: #000000
+}
+
+.s-1 {
+	color: #0000aa
+}
+
+.s-2 {
+	color: #00aa00
+}
+
+.s-3 {
+	color: #00aaaa
+}
+
+.s-4 {
+	color: #aa0000
+}
+
+.s-5 {
+	color: #aa00aa
+}
+
+.s-6 {
+	color: #ffaa00
+}
+
+.s-7 {
+	color: #aaaaaa
+}
+
+.s-8 {
+	color: #545454
+}
+
+.s-9 {
+	color: #5454ff
+}
+
+.s-a {
+	color: #54ff54
+}
+
+.s-b {
+	color: #54ffff
+}
+
+.s-c {
+	color: #ff5454
+}
+
+.s-d {
+	color: #ff54ff
+}
+
+.s-e {
+	color: #ffff54
+}
+
+.s-f {
+	color: #ffffff
+}
+
+.s-g {
+	color: #ddd605
+}
+
+.s-h {
+	color: #e2d3d1
+}
+
+.s-i {
+	color: #cec9c9
+}
+
+.s-j {
+	color: #44393a
+}
+
+.s-l {
+	font-weight: bold;
+	letter-spacing: 0.07rem;
+}
+
+.s-m {
+	color: #961506
+}
+
+.s-n {
+	color: #b4684d
+}
+
+.s-o {
+	font-style: italic;
+}
+
+.s-p {
+	color: #deb02c
+}
+
+.s-q {
+	color: #119f36
+}
+
+.s-r {
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+}
+
+.s-s {
+	color: #2cb9a8
+}
+
+.s-t {
+	color: #20487a
+}
+
+.s-u {
+	color: #9a5cc5
 }
