@@ -3,30 +3,180 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>二択クイズ - Niju server</title>
+        <title>【速報】二択クイズが面白すぎる件ｗｗｗ - Niju Server まとめ速報</title>
         <link rel="stylesheet" href="../styles.css">
         <link rel="icon" href="../images/favicon.ico">
         <script src="../src/jquery-3.7.1.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/4f64a02f69.js"crossorigin="anonymous"></script>
-        <meta property="og:title" content="Niju Server" />
-        <meta property="og:description" content="Niju Serverでも有名な大人気企画、二択クイズ！今回はそんな二択クイズの..." />
+        <script src="https://kit.fontawesome.com/4f64a02f69.js" crossorigin="anonymous"></script>
+        
+        <meta property="og:title" content="Niju Server まとめ速報" />
+        <meta property="og:description" content="誰もが知っているNiju Serverの伝説的な企画「二択クイズ」を徹底解剖！驚愕の回答をまとめてみました！" />
         <meta property="og:url" content="https://mihiro13.github.io/nijuserver/" />
         <meta property="og:image" content="https://photock.jp/photo/big_webp/photo0000-3037.webp" />
-        <meta property="og:image:width" content="728" />
-        <meta property="og:image:height" content="484" />
         <meta property="og:type" content="website" />
+
+        <style>
+            /* 全体の背景を少しグレーにしてブログっぽくする */
+            body {
+                background-color: #f2f2f2;
+                font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+                color: #333;
+            }
+
+            /* ナビバーの調整 */
+            .navbar-brand {
+                font-weight: bold;
+                color: #ffcc00 !important;
+            }
+
+            /* 記事部分のコンテナを白背景で浮かせる */
+            main.col-lg-8 {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                padding: 30px; /* パディングを少し広めに */
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+
+            /* 記事タイトル：デカ文字・赤文字で煽るスタイル */
+            .blog-post-title {
+                font-size: 26px;
+                font-weight: bold;
+                color: #cc0000; /* まとめブログ特有の赤 */
+                border-bottom: 2px solid #333;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                line-height: 1.4;
+            }
+
+            /* 投稿日時などのメタ情報 */
+            .blog-post-meta {
+                color: #999;
+                font-size: 13px;
+                text-align: right;
+                margin-bottom: 30px;
+            }
+
+            /* 見出しh2：ブログによくある左線スタイル */
+            article h2 {
+                font-size: 20px;
+                background: #f9f9f9;
+                padding: 12px 10px 12px 15px;
+                border-left: 8px solid #ff9900; /* オレンジのアクセント */
+                border-bottom: 1px solid #ddd;
+                margin-top: 40px;
+                margin-bottom: 25px;
+                font-weight: bold;
+            }
+
+            /* 本文の強調：蛍光ペン風マーカー */
+            .highlight-text {
+                background: linear-gradient(transparent 60%, #ffff66 60%);
+                font-weight: bold;
+                color: #000;
+            }
+
+            /* 引用・レス部分のスタイル（掲示板風） */
+            .res-container {
+                background-color: #f0f7ff; /* 薄い青色背景 */
+                border: 1px solid #b3c6e6;
+                border-radius: 4px;
+                padding: 15px;
+                margin: 25px 0;
+            }
+
+            .res-title {
+                font-weight: bold;
+                color: #2b5491; /* 掲示板のスレタイ色 */
+                border-bottom: 1px dotted #2b5491;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
+
+            .res-item {
+                margin-bottom: 15px;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            /* レスアンカー風の装飾 */
+            .res-name {
+                color: #228b22; /* 緑色（名前欄っぽい色） */
+                font-weight: bold;
+            }
+            .res-info {
+                color: #666;
+                font-size: 0.9em;
+            }
+            .res-anchor {
+                color: #0044cc;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            /* サイドバーのデザイン */
+            aside .sidebar-box {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                margin-bottom: 20px;
+                padding: 0; /* ヘッダーのためにパディング0 */
+            }
+
+            aside h4 {
+                font-size: 15px;
+                font-weight: bold;
+                background: #333; /* 黒背景 */
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+                margin: 0;
+            }
+            
+            aside ul, aside ol {
+                padding: 15px 25px;
+                margin-bottom: 0;
+            }
+            
+            aside li {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+
+            /* リンクの色を青く、下線をつける（古き良きインターネット） */
+            a {
+                color: #0044cc;
+                text-decoration: underline !important;
+            }
+            a:hover {
+                color: #dd0000;
+            }
+            
+            /* ナビバー内のリンクは下線なし */
+            .navbar a {
+                text-decoration: none !important;
+            }
+
+            /* フッター */
+            footer {
+                background-color: #333 !important;
+                padding: 30px;
+                color: #fff;
+                margin-top: 50px;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark webnav">
                 <div class="container">
-                    <a class="navbar-brand" href="#"><image class="brand-logo" href="images/brand.png"> Niju Server</a>
+                    <a class="navbar-brand" href="#">Niju Server まとめ速報</a>
                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             </button>
                 <div class="navbar-collapse collapse" id="navbar">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../index.html"><i class="fa-solid fa-house"></i> Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
                         <li class="nav-item"><a class="nav-link" href="wiki.html"><i class="fa-solid fa-book"></i> Wiki</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-user"></i> Contact</a></li>
@@ -34,15 +184,139 @@
                     <ul class="navbar-nav justify-content-end">
                         <li class="nav-item"><a class="nav-link" href="https://discord.gg/rypNPn2cHh"><i class="fa-brands fa-discord"></i></a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
-        </div>
-        <div class="py-5 md-4 text-center">
-            <h1>Niju server</h1>
-        </div>
-            <footer class="footer mt-5 bg-dark text-white d-flex align-items-center justify-content-center">
-                    <h5>Niju Server</h5>
-            </footer>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        </nav>
+        
+        <div class="container" style="padding-top: 90px; padding-bottom: 50px;">
+            <div class="row">
+                <main class="col-lg-8">
+                    <article class="blog-post">
+                        <h1 class="blog-post-title">【衝撃】Niju Serverの「二択クイズ」で思わず吹いた回答集ｗｗｗ</h1>
+                        <p class="blog-post-meta">2025年12月08日 18:00 <a href="#">名無しさん＠まとめ</a></p>
+
+                        <div class="text-center mb-4">
+                            <img src="../images/hige_ramen.jpg" class="img-fluid" alt="二択クイズイメージ">
+                        </div>
+
+                        <p>どうも、Niju Server まとめ速報です！<br>
+                        今日も元気に<span class="highlight-text">二択クイズ</span>の話題をまとめていきますよ！</p>
+                        <p>Niju Serverの中でも特に人気のある企画といえば、やっぱり「二択クイズ」ですよね！<br>
+                        参加者の個性が爆発するあの空間は、まさにカオスで腹筋崩壊ものです。</p>
+                        
+                        <hr>
+
+                        <h2>Q. 食べるなら「無限に続くラーメン」？ それとも「一瞬で消える高級ステーキ」？</h2>
+                        <p>この質問、あなたならどう答えますか？<br>
+                        普通なら「高級ステーキ」を選ぶ人が多いはず...しかし、Niju Serverの猛者たちは違った！</p>
+
+                        <div class="res-container">
+                            <h5 class="res-title">【悲報】Niju民の回答、狂っていた</h5>
+                            
+                            <div class="res-item">
+                                <span class="res-name">1 ：名無しのNiju民</span>：2025/12/08(月) 12:30:00 ID:NijuServer<br>
+                                <span style="font-size: 1.2em; font-weight:bold; color:#000;">「無限に続くラーメン」一択だろ！</span><br>
+                                食費が浮くし、なんならラーメン屋開けるわｗｗｗ
+                            </div>
+
+                            <div class="res-item">
+                                <span class="res-name">2 ：匿名希望</span>：2025/12/08(月) 12:32:15 ID:RaMeNLoVe<br>
+                                <span class="res-anchor">&gt;&gt;1</span><br>
+                                高級ステーキって言ってる奴は貧乏人乙<br>
+                                ラーメンの可能性を理解してない。スープで生活できる。<br>
+                            </div>
+
+                            <div class="res-item">
+                                <span class="res-name">3 ：サーバー主 <i class="fa-solid fa-crown" style="color:gold;"></i></span>：2025/12/08(月) 12:35:44 ID:ADMIN<br>
+                                ラーメンは途中で飽きる。<br>
+                                <span class="highlight-text">高級ステーキを選んで、その一瞬の感動を脳に焼き付ける！（至言）</span>
+                            </div>
+                            
+                            <div class="res-item">
+                                <span class="res-name">4 ：名無しのNiju民</span>：2025/12/08(月) 12:38:00 ID:MoBChaR<br>
+                                <span class="res-anchor">&gt;&gt;3</span><br>
+                                主、かっこつけてるけど金ないだけ説ｗｗｗ
+                            </div>
+                        </div>
+                        
+                        <p>サーバー主まで参戦してて草！<br>
+                        やっぱ、ラーメンを選ぶ人が多いみたいですね。実利を取るのがNiju民らしいというか…。</p>
+                        
+                        <hr>
+
+                        <h2>Q. 「世界一臭い靴下」と「世界一美味しいケーキ」を交換できる？</h2>
+                        <p>これは究極の選択！交換することで生まれるメリット・デメリットを考えて、みんな真剣に悩んでいました。</p>
+                        
+                        <div class="res-container">
+                            <div class="res-item">
+                                <span class="res-name">156 ：スイーツ大好き</span>：2025/12/08(月) 13:10:05 ID:CakeLover<br>
+                                交換する。ケーキは一瞬の喜びだが、<br>
+                                <span style="color:red; font-weight:bold;">臭い靴下で人を遠ざけられるのは防御力アップ！</span>
+                            </div>
+                             <div class="res-item">
+                                <span class="res-name">157 ：名無しさん</span>：2025/12/08(月) 13:11:20 ID:AbCdEfG<br>
+                                <span class="res-anchor">&gt;&gt;156</span><br>
+                                お前それぼっち確定じゃん…
+                            </div>
+                        </div>
+
+                        <p>156のコメント、ポジティブすぎてワロタ。こういう発想が出てくるのが、このクイズの面白いところですよね！<br>
+                        あなたもNiju Serverでこのカオスを体験してみませんか？</p>
+                        
+                        <div class="text-center mt-5 mb-4">
+                            <a href="https://discord.gg/rypNPn2cHh" class="btn btn-primary btn-lg fw-bold" style="padding: 15px 30px; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                <i class="fa-brands fa-discord"></i> Niju Serverに参加してクイズに挑戦！
+                            </a>
+                        </div>
+                        
+                        <div class="mt-5 p-3 mb-3" style="background-color: #fff; border: 1px solid #ccc;">
+                            <h5 style="border-bottom: 2px solid #333; padding-bottom: 5px;">合わせて読みたい（おすすめ記事）</h5>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="wiki.html" style="font-weight:bold;">【まとめ】Niju Serverで起きた面白事件簿！伝説の〇〇事件とは？</a></li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="about.html" style="font-weight:bold;">【驚愕】知られざるサーバー主の黒歴史発掘！やばすぎるｗｗｗ</a></li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="#" style="font-weight:bold;">【画像】昨日のイベントの様子がこちらｗｗｗｗｗｗ</a></li>
+                            </ul>
+                        </div>
+
+                    </article>
+                </main>
+                
+                <aside class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px;">
+                        
+                        <div class="sidebar-box rounded">
+                            <h4>カテゴリー</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#">面白ネタ (52)</a></li>
+                                <li><a href="#">二択クイズ (18)</a></li>
+                                <li><a href="#">サーバー雑談 (105)</a></li>
+                                <li><a href="#">運営情報 (5)</a></li>
+                                <li><a href="#">黒歴史 (3)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-box rounded">
+                            <h4>最新記事</h4>
+                            <ol class="list-unstyled" style="padding: 15px 20px;">
+                                <li><a href="#">〇〇さんがまたやらかした件について</a></li>
+                                <li><a href="#">新メンバー紹介！期待の新人現る</a></li>
+                                <li><a href="#">運営からのお知らせ：BAN基準変更</a></li>
+                                <li><a href="#">【悲報】サーバー主、寝坊する</a></li>
+                                <li><a href="#">次回のイベント日程決定！</a></li>
+                            </ol>
+                        </div>
+                        
+                        <div class="text-center">
+                            <img src="../images/ad1.jpg" class="img-fluid" alt="広告">
+                        </div>
+                        
+                    </div>
+                </aside>
+            </div></div><footer class="footer d-flex flex-column align-items-center justify-content-center">
+                <h5 class="mb-3">Niju Server まとめ速報</h5>
+                <p class="small mb-0">Copyright &copy; 2025 Niju Server Matome. All Rights Reserved.</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
 </html>

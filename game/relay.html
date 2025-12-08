@@ -3,24 +3,170 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>アスレチックリレー - Niju server</title>
+        <title>【神回】アスレチックリレーで放送事故レベルの奇跡起きたｗｗｗ - Niju Server まとめ速報</title>
         <link rel="stylesheet" href="../styles.css">
         <link rel="icon" href="../images/favicon.ico">
         <script src="../src/jquery-3.7.1.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/4f64a02f69.js"crossorigin="anonymous"></script>
-        <meta property="og:title" content="Niju Server" />
-        <meta property="og:description" content="Niju Serverでも有名な大人気企画、アスレチックリレー！今回はそんなアスレチックリレーの..." />
+        <script src="https://kit.fontawesome.com/4f64a02f69.js" crossorigin="anonymous"></script>
+        
+        <meta property="og:title" content="Niju Server まとめ速報" />
+        <meta property="og:description" content="Niju Server名物「アスレチックリレー」での珍プレー好プレーまとめ！まさかの結末に全米が泣いた！？" />
         <meta property="og:url" content="https://mihiro13.github.io/nijuserver/" />
         <meta property="og:image" content="https://photock.jp/photo/big_webp/photo0000-3037.webp" />
-        <meta property="og:image:width" content="728" />
-        <meta property="og:image:height" content="484" />
         <meta property="og:type" content="website" />
+
+        <style>
+            /* 全体の背景を少しグレーにしてブログっぽくする */
+            body {
+                background-color: #f2f2f2;
+                font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+                color: #333;
+            }
+
+            /* ナビバーの調整 */
+            .navbar-brand {
+                font-weight: bold;
+                color: #ffcc00 !important;
+            }
+
+            /* 記事部分のコンテナを白背景で浮かせる */
+            main.col-lg-8 {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                padding: 30px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+
+            /* 記事タイトル：デカ文字・赤文字で煽るスタイル */
+            .blog-post-title {
+                font-size: 26px;
+                font-weight: bold;
+                color: #cc0000;
+                border-bottom: 2px solid #333;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                line-height: 1.4;
+            }
+
+            /* 投稿日時などのメタ情報 */
+            .blog-post-meta {
+                color: #999;
+                font-size: 13px;
+                text-align: right;
+                margin-bottom: 30px;
+            }
+
+            /* 見出しh2：ブログによくある左線スタイル */
+            article h2 {
+                font-size: 20px;
+                background: #f9f9f9;
+                padding: 12px 10px 12px 15px;
+                border-left: 8px solid #ff9900;
+                border-bottom: 1px solid #ddd;
+                margin-top: 40px;
+                margin-bottom: 25px;
+                font-weight: bold;
+            }
+
+            /* 本文の強調：蛍光ペン風マーカー */
+            .highlight-text {
+                background: linear-gradient(transparent 60%, #ffff66 60%);
+                font-weight: bold;
+                color: #000;
+            }
+
+            /* 引用・レス部分のスタイル（掲示板風） */
+            .res-container {
+                background-color: #f0f7ff;
+                border: 1px solid #b3c6e6;
+                border-radius: 4px;
+                padding: 15px;
+                margin: 25px 0;
+            }
+
+            .res-title {
+                font-weight: bold;
+                color: #2b5491;
+                border-bottom: 1px dotted #2b5491;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
+
+            .res-item {
+                margin-bottom: 15px;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            /* レスアンカー風の装飾 */
+            .res-name {
+                color: #228b22;
+                font-weight: bold;
+            }
+            .res-anchor {
+                color: #0044cc;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            /* サイドバーのデザイン */
+            aside .sidebar-box {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                margin-bottom: 20px;
+                padding: 0;
+            }
+
+            aside h4 {
+                font-size: 15px;
+                font-weight: bold;
+                background: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+                margin: 0;
+            }
+            
+            aside ul, aside ol {
+                padding: 15px 25px;
+                margin-bottom: 0;
+            }
+            
+            aside li {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+
+            /* リンクの色を青く、下線をつける */
+            a {
+                color: #0044cc;
+                text-decoration: underline !important;
+            }
+            a:hover {
+                color: #dd0000;
+            }
+            
+            /* ナビバー内のリンクは下線なし */
+            .navbar a {
+                text-decoration: none !important;
+            }
+
+            /* フッター */
+            footer {
+                background-color: #333 !important;
+                padding: 30px;
+                color: #fff;
+                margin-top: 50px;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark webnav">
                 <div class="container">
-                    <a class="navbar-brand" href="#"><image class="brand-logo" href="images/brand.png"> Niju Server</a>
+                    <a class="navbar-brand" href="#"> Niju Server まとめ速報</a>
                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             </button>
@@ -34,15 +180,136 @@
                     <ul class="navbar-nav justify-content-end">
                         <li class="nav-item"><a class="nav-link" href="https://discord.gg/rypNPn2cHh"><i class="fa-brands fa-discord"></i></a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
-        </div>
-        <div class="py-5 md-4 text-center">
-            <h1>Niju server</h1>
-        </div>
-            <footer class="footer mt-5 bg-dark text-white d-flex align-items-center justify-content-center">
-                    <h5>Niju Server</h5>
-            </footer>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        </nav>
+        
+        <div class="container" style="padding-top: 90px; padding-bottom: 50px;">
+            <div class="row">
+                <main class="col-lg-8">
+                    <article class="blog-post">
+                        <h1 class="blog-post-title">【神回】アスレチックリレーで放送事故レベルの奇跡起きたｗｗｗ</h1>
+                        <p class="blog-post-meta">2025年12月10日 20:00 <a href="#">パルクール勢</a></p>
+
+                        <div class="text-center mb-4">
+                            <img src="../images/tanomi.jpg" class="img-fluid" alt="アスレチックリレー">
+                        </div>
+
+                        <p>こんにちは、Niju Server まとめ速報です！<br>
+                        先日開催された<span class="highlight-text">「第5回 アスレチックリレー大会」</span>、皆さん参加しましたか？</p>
+                        <p>今回は難易度設定が鬼畜すぎると話題でしたが、それ以上に<span class="highlight-text">予期せぬトラブル</span>が多すぎて、観戦勢としては最高に笑える展開になりました。</p>
+                        
+                        <hr>
+
+                        <h2>第1走者でまさかの全滅！？「氷ブロック」の罠</h2>
+                        <p>スタート直後、第1エリアの「氷渡りゾーン」で事件は起きました。<br>
+                        トッププレイヤーたちが次々と奈落へ落ちていく地獄絵図がこちら。</p>
+
+                        <div class="res-container">
+                            <h5 class="res-title">【悲報】参加者さん、床が滑って進めない</h5>
+                            
+                            <div class="res-item">
+                                <span class="res-name">1 ：名無しのパルクール</span>：2025/12/10(水) 19:30:00 ID:IceSlippy<br>
+                                開始3秒で5人落ちてて草<br>
+                                運営性格悪すぎだろｗｗｗｗｗ
+                            </div>
+
+                            <div class="res-item">
+                                <span class="res-name">2 ：見学席の民</span>：2025/12/10(水) 19:31:45 ID:Watcher<br>
+                                <span class="res-anchor">&gt;&gt;1</span><br>
+                                あれ摩擦係数設定ミスってるだろ絶対<br>
+                                氷っていうかオイルまみれの床じゃねーか
+                            </div>
+
+                            <div class="res-item">
+                                <span class="res-name">3 ：優勝候補A</span>：2025/12/10(水) 19:35:12 ID:ProGamer<br>
+                                いや、あれはシフト押しながらジャンプすればいける。<br>
+                                <span class="highlight-text">まあ俺は落ちたけどな（半ギレ）</span>
+                            </div>
+                        </div>
+                        
+                        <p>優勝候補ですら突破できない魔のエリア...。<br>
+                        結局、第1エリアを突破するのに15分かかったチームもあったとか。</p>
+                        
+                        <hr>
+
+                        <h2>アンカー勝負で起きた「回線落ち」という悲劇</h2>
+                        <p>そして物語はクライマックスへ。<br>
+                        赤チームと青チームがほぼ同時にゴールテープを切ろうとしたその瞬間！</p>
+                        
+                        <div class="res-container">
+                            <div class="res-item">
+                                <span class="res-name">108 ：赤チーム応援団</span>：2025/12/10(水) 20:10:05 ID:RedWin<br>
+                                赤チームのアンカー、ゴール手前で静止してワロタ<br>
+                                これ完全に回線落ちですわ
+                            </div>
+                             <div class="res-item">
+                                <span class="res-name">109 ：青チーム応援団</span>：2025/12/10(水) 20:11:20 ID:BlueWin<br>
+                                <span class="res-anchor">&gt;&gt;108</span><br>
+                                これも実力のうちや！<br>
+                                <span style="color:red; font-weight:bold;">Niju Serverでは回線強者こそが正義（確信）</span>
+                            </div>
+                            <div class="res-item">
+                                <span class="res-name">110 ：サーバー主 <i class="fa-solid fa-crown" style="color:gold;"></i></span>：2025/12/10(水) 20:15:00 ID:ADMIN<br>
+                                すまん、俺が電子レンジ使ったせいでラグったかもしれん
+                            </div>
+                        </div>
+
+                        <p>まさかのサーバー主の電子レンジテロ疑惑ｗｗｗ<br>
+                        結局、再試合なしで青チームの優勝となりました。これがNiju Serverクオリティ。</p>
+                        
+                        <div class="text-center mt-5 mb-4">
+                            <a href="https://discord.gg/rypNPn2cHh" class="btn btn-primary btn-lg fw-bold" style="padding: 15px 30px; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                <i class="fa-brands fa-discord"></i> 次回のリレー大会に参加する！
+                            </a>
+                        </div>
+                        
+                        <div class="mt-5 p-3 mb-3" style="background-color: #fff; border: 1px solid #ccc;">
+                            <h5 style="border-bottom: 2px solid #333; padding-bottom: 5px;">合わせて読みたい（おすすめ記事）</h5>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="nitaku.html" style="font-weight:bold;">【悲報】二択クイズの回答、狂気じみていると話題に</a></li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="wiki.html" style="font-weight:bold;">【攻略】アスレチック第3エリアのショートカット解説</a></li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="#" style="font-weight:bold;">サーバー主「ごめん、鯖落ちた」→その理由が斜め上すぎた</a></li>
+                            </ul>
+                        </div>
+
+                    </article>
+                </main>
+                
+                <aside class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px;">
+                        
+                        <div class="sidebar-box rounded">
+                            <h4>カテゴリー</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#">イベント結果 (12)</a></li>
+                                <li><a href="#">アスレチック攻略 (45)</a></li>
+                                <li><a href="#">バグ報告 (99+)</a></li>
+                                <li><a href="#">サーバー雑談 (105)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-box rounded">
+                            <h4>最新記事</h4>
+                            <ol class="list-unstyled" style="padding: 15px 20px;">
+                                <li><a href="#">リレー大会の賞品がショボすぎた件</a></li>
+                                <li><a href="#">【急募】落下死しない方法</a></li>
+                                <li><a href="#">次回のPVP大会のルールについて</a></li>
+                                <li><a href="#">サーバーのラグを直す方法募集中</a></li>
+                            </ol>
+                        </div>
+                        
+                        <div class="text-center">
+                            <img src="../images/ad2.jpg" class="img-fluid" alt="広告">
+                        </div>
+                        
+                    </div>
+                </aside>
+            </div></div><footer class="footer d-flex flex-column align-items-center justify-content-center">
+                <h5 class="mb-3">Niju Server まとめ速報</h5>
+                <p class="small mb-0">Copyright &copy; 2025 Niju Server Matome. All Rights Reserved.</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
 </html>
