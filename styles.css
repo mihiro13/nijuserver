@@ -18,10 +18,6 @@ li {
     list-style-type: none;
 }
 
-a {
-    text-decoration: none;
-}
-
 img{
     max-width: 100%;
     height: 100%;
@@ -48,6 +44,17 @@ img{
 	bottom: 0;
 	width: 100%;
 	height: 6rem;
+	position: sticky;
+}
+
+.navbar {
+	height: 7vh;
+}
+
+footer {
+  position: sticky;
+  top: 100vh;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
