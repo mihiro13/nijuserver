@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>【悲報】シャトルラン、過疎化が止まらないｗｗｗｗ 遊び尽くしたランナーの悲しい叫び - Niju Server まとめ速報</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="icon" href="../images/favicon.ico">
+        <script src="../src/jquery-3.7.1.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/4f64a02f69.js" crossorigin="anonymous"></script>
+        
+        <meta property="og:title" content="Niju Server まとめ速報" />
+        <meta property="og:description" content="Niju Serverの定番企画「シャトルラン」が、配布ワールドという性質上、過疎化が進んでいる模様。遊び尽くしたランナーの現状とは？" />
+        <meta property="og:url" content="https://mihiro13.github.io/nijuserver/" />
+        <meta property="og:image" content="https://photock.jp/photo/big_webp/photo0000-3037.webp" />
+        <meta property="og:type" content="website" />
+
+        <style>
+            /* 全体の背景を少しグレーにしてブログっぽくする */
+            body {
+                background-color: #f2f2f2;
+                font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+                color: #333;
+            }
+
+            /* ナビバーの調整 */
+            .navbar-brand {
+                font-weight: bold;
+                color: #ffcc00 !important;
+            }
+
+            /* 記事部分のコンテナを白背景で浮かせる */
+            main.col-lg-8 {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                padding: 30px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+
+            /* 記事タイトル：デカ文字・赤文字で煽るスタイル */
+            .blog-post-title {
+                font-size: 26px;
+                font-weight: bold;
+                color: #cc0000;
+                border-bottom: 2px solid #333;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                line-height: 1.4;
+            }
+
+            /* 投稿日時などのメタ情報 */
+            .blog-post-meta {
+                color: #999;
+                font-size: 13px;
+                text-align: right;
+                margin-bottom: 30px;
+            }
+
+            /* 見出しh2：ブログによくある左線スタイル */
+            article h2 {
+                font-size: 20px;
+                background: #f9f9f9;
+                padding: 12px 10px 12px 15px;
+                border-left: 8px solid #ff9900;
+                border-bottom: 1px solid #ddd;
+                margin-top: 40px;
+                margin-bottom: 25px;
+                font-weight: bold;
+            }
+
+            /* 本文の強調：蛍光ペン風マーカー */
+            .highlight-text {
+                background: linear-gradient(transparent 60%, #ffff66 60%);
+                font-weight: bold;
+                color: #000;
+            }
+
+            /* 引用・レス部分のスタイル（掲示板風） */
+            .res-container {
+                background-color: #f0f7ff;
+                border: 1px solid #b3c6e6;
+                border-radius: 4px;
+                padding: 15px;
+                margin: 25px 0;
+            }
+
+            .res-title {
+                font-weight: bold;
+                color: #2b5491;
+                border-bottom: 1px dotted #2b5491;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
+
+            .res-item {
+                margin-bottom: 15px;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            /* レスアンカー風の装飾 */
+            .res-name {
+                color: #228b22;
+                font-weight: bold;
+            }
+            .res-anchor {
+                color: #0044cc;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            /* サイドバーのデザイン */
+            aside .sidebar-box {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                margin-bottom: 20px;
+                padding: 0;
+            }
+
+            aside h4 {
+                font-size: 15px;
+                font-weight: bold;
+                background: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+                margin: 0;
+            }
+            
+            aside ul, aside ol {
+                padding: 15px 25px;
+                margin-bottom: 0;
+            }
+            
+            aside li {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+
+            /* リンクの色を青く、下線をつける */
+            a {
+                color: #0044cc;
+                text-decoration: underline !important;
+            }
+            a:hover {
+                color: #dd0000;
+            }
+            
+            /* ナビバー内のリンクは下線なし */
+            .navbar a {
+                text-decoration: none !important;
+            }
+
+            /* フッター */
+            footer {
+                background-color: #333 !important;
+                padding: 30px;
+                color: #fff;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark webnav">
+                <div class="container">
+                    <a class="navbar-brand" href="#"> Niju Server まとめ速報</a>
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="wiki.html"><i class="fa-solid fa-book"></i> Wiki</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-user"></i> Contact</a></li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/rypNPn2cHh"><i class="fa-brands fa-discord"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container" style="padding-top: 90px; padding-bottom: 50px;">
+            <div class="row">
+                <main class="col-lg-8">
+                    <article class="blog-post">
+                        <h1 class="blog-post-title">【悲報】シャトルラン、過疎化が止まらないｗｗｗｗ 遊び尽くしたプレイヤーの悲しい叫び</h1>
+                        <p class="blog-post-meta">2024/09/08 15:44 <a href="#">孤独ランナー</a></p>
+
+                        <div class="text-center mb-4">
+                            <img src="../images/shuttlerun.png" class="img-fluid" alt="シャトルラン過疎">
+                        </div>
+
+                        <p>どうも、Niju Server まとめ速報です！<br>
+                        今回は、Niju Serverの企画の一つ<b>「シャトルラン」</b>について。その人気の高さからサーバーに定着したものの、今、<b>過疎化が深刻</b>だと話題になっています。</p>
+                        <p>理由はもちろん、<b>配布ワールド</b>として公開されているため、みんなが遊び尽くしてしまったからです...</p>
+                        
+                        <hr>
+
+                        <h2>シャトルランとは？ 楽しすぎるがゆえの弊害</h2>
+                        <p>シャトルランは、タイムを競うシンプルなマイクラのミニゲームです。コースの設計が秀逸で、一度ハマるとやめられない面白さがあります。</p>
+                        
+                        <p>しかし、この企画の性質上、以下の問題が発生しています。</p>
+                        
+                        <ul class="list-unstyled" style="margin-left: 20px;">
+                            <li><i class="fa-solid fa-map-pin text-info"></i> <b>配布ワールド</b>であるため、コースが固定。<b>攻略法が確立</b>されている。</li>
+                            <li><i class="fa-solid fa-ranking-star text-info"></i> プレイヤーは全てを遊び尽くし、<b>残っているのは記録更新を目指すガチ勢だけ</b>。</li>
+                            <li><i class="fa-solid fa-user-slash text-info"></i> 結果、誰もいなくなり、今や<b>記録ボードだけが虚しく残る</b>状態に...。</li>
+                        </ul>
+                        
+                        <p><b>「面白すぎるゲームは、飽きられるのも早い」</b>という皮肉な状況です。</p>
+
+                        <hr>
+
+                        <h2>スレの様子：遊び尽くしたプレイヤーたちの悲しい叫び</h2>
+                        <p>シャトルランスレでは、誰とも出会えない現状に対する、プレイヤーたちの悲しいながらもユーモラスな叫びが投稿されています。</p>
+
+                        <div class="res-container">
+                            <h5 class="res-title">シャトルランの過疎化が止まらない件ｗｗｗ</h5>
+                            
+                            <div class="res-item">
+                                <span class="res-name">1 ：名無しNiju号</span>：2024/09/08(日) 15:44:07 ID:tO4HPaqvd<br>
+                                シャトルラン来たけど<b>誰もいねえｗｗｗ</b><br>
+                                フレンドと話そうかと思ったけどソロランだったわｗ
+                            </div>
+
+                            <div class="res-item">
+                                <span class="res-name">2 ：名無しNiju号</span>：2024/09/08(日) 15:47:14 ID:KgaOh6xap<br>
+                                <span class="res-anchor">&gt;&gt;1</span><br>
+                                むしろ今は<b>ソロで集中する時間</b>ね<br>
+                                50ステージまではもう<b>画面見なくても走れる</b>レベルになった
+                            </div>
+                            
+                            <div class="res-item">
+                                <span class="res-name">7 ：名無しNiju号</span>：2024/09/08(日) 15:56:21 ID:Gh/7b8xf0<br>
+                                新しい企画はよ<br>
+                                どんなに面白くても<b>同じコースだと限界がある</b>
+                            </div>
+                            
+                            <div class="res-item">
+                                <span class="res-name">16 ：名無しのランナー</span>：2024/09/08(日) 16:38:20 ID:6R84pyfa0<br>
+                                <span class="res-anchor">&gt;&gt;2</span><br>
+                                確かに過疎ってるけど<b>ワールドのクオリティ自体は高い</b>んよな<br>
+                                <span class="highlight-text">「過疎ってるけど面白い」という矛盾した状態</span>
+                            </div>
+                        </div>
+
+                        <p>過疎でも遊び続けるプレイヤーの熱意は本物。運営は新しい配布ワールドの導入か、<b>「シャトルランR (リニューアル)」</b>の企画を早急に進めてほしいところです！</p>
+                        
+                        <div class="text-center mt-5 mb-4">
+                            <a href="https://discord.gg/rypNPn2cHh" class="btn btn-primary btn-lg fw-bold" style="padding: 15px 30px; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                <i class="fa-brands fa-discord"></i> Niju Serverで孤独なシャトルランをプレイ！
+                            </a>
+                        </div>
+                        
+                        <div class="mt-5 p-3 mb-3" style="background-color: #fff; border: 1px solid #ccc;">
+                            <h5 style="border-bottom: 2px solid #333; padding-bottom: 5px;">合わせて読みたい（おすすめ記事）</h5>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="#" style="font-weight:bold;">【悲報】シャトルランで不正行為が発覚、運営激怒</a></li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="nitaku.html" style="font-weight:bold;">【悲報】二択クイズの回答、狂気じみていると話題に</a></li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-right text-warning"></i> <a href="onigotsu.html" style="font-weight:bold;">【絶望】鬼ごっこ、難易度が高すぎるｗｗｗ</a></li>
+                            </ul>
+                        </div>
+
+                    </article>
+                </main>
+                
+                <aside class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px;">
+                        
+                        <div class="sidebar-box rounded">
+                            <h4>カテゴリー</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#">シャトルラン (25)</a></li>
+                                <li><a href="#">過疎問題 (5)</a></li>
+                                <li><a href="#">運営要望 (15)</a></li>
+                                <li><a href="#">サーバー雑談 (105)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-box rounded">
+                            <h4>最新記事</h4>
+                            <ol class="list-unstyled" style="padding: 15px 20px;">
+                                <li><a href="#">【この記事】シャトルラン、過疎化が止まらないｗｗｗｗ</a></li>
+                                <li><a href="#">niju都市鯖荒らし事件の全貌と裏側</a></li>
+                                <li><a href="#">リレー大会の賞品がショボすぎた件</a></li>
+                                <li><a href="#">サーバー主の次回作の予告が意味不明すぎる件</a></li>
+                            </ol>
+                        </div>
+                        
+                        <div class="text-center">
+                            <img src="../images/ad2.jpg" class="img-fluid" alt="広告">
+                        </div>
+                        
+                    </div>
+                </aside>
+            </div></div><footer class="footer d-flex flex-column align-items-center justify-content-center">
+                <h5 class="mb-3">Niju Server まとめ速報</h5>
+                <p class="small mb-0">Copyright &copy; 2025 Niju Server Matome. All Rights Reserved.</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>
