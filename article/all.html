@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>記事一覧 - Niju Server まとめ速報</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="icon" href="../images/favicon.ico">
+        <script src="../src/jquery-3.7.1.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/4f64a02f69.js" crossorigin="anonymous"></script>
+        
+        <meta property="og:title" content="Niju Server まとめ速報" />
+        <meta property="og:description" content="Niju Serverで起きた話題の事件や面白企画の記事一覧です。" />
+        <meta property="og:url" content="https://mihiro13.github.io/nijuserver/" />
+        <meta property="og:image" content="https://photock.jp/photo/big_webp/photo0000-3037.webp" />
+        <meta property="og:type" content="website" />
+
+        <style>
+            /* 全体の背景を少しグレーにしてブログっぽくする */
+            body {
+                background-color: #f2f2f2;
+                font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+                color: #333;
+            }
+            .navbar-brand { font-weight: bold; color: #ffcc00 !important; }
+
+            /* 記事一覧コンテナのスタイル */
+            main.col-lg-8 {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                padding: 30px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+
+            /* ページタイトル */
+            .page-title {
+                font-size: 28px;
+                font-weight: bold;
+                color: #333;
+                border-left: 10px solid #cc0000;
+                padding-left: 15px;
+                margin-bottom: 40px;
+                padding-bottom: 5px;
+            }
+            
+            /* 記事サムネイルリストのスタイル */
+            .article-list-item {
+                display: flex;
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #eee;
+                transition: background-color 0.2s;
+                text-decoration: none !important;
+                color: inherit;
+            }
+            .article-list-item:hover {
+                background-color: #f9f9f9;
+                text-decoration: none;
+            }
+
+            .article-thumb {
+                flex-shrink: 0;
+                width: 120px;
+                height: 80px;
+                overflow: hidden;
+                margin-right: 15px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            .article-thumb img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .article-info {
+                flex-grow: 1;
+            }
+            .article-title-list {
+                font-size: 16px;
+                font-weight: bold;
+                color: #0044cc;
+                margin-bottom: 5px;
+                line-height: 1.4;
+            }
+            .article-date {
+                font-size: 12px;
+                color: #999;
+            }
+
+            /* サイドバーのデザイン (省略) */
+            aside .sidebar-box {
+                background-color: #fff; border: 1px solid #ddd; margin-bottom: 20px; padding: 0;
+            }
+            aside h4 {
+                font-size: 15px; font-weight: bold; background: #333; color: #fff; padding: 10px; text-align: center; margin: 0;
+            }
+            
+            /* フッター (省略) */
+            footer { background-color: #333 !important; padding: 30px; color: #fff; margin-top: 50px; }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark webnav">
+                <div class="container">
+                    <a class="navbar-brand" href="#"> Niju Server まとめ速報</a>
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="wiki.html"><i class="fa-solid fa-book"></i> Wiki</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-user"></i> Contact</a></li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/rypNPn2cHh"><i class="fa-brands fa-discord"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container" style="padding-top: 90px; padding-bottom: 50px;">
+            <div class="row">
+                <main class="col-lg-8">
+                    <h1 class="page-title">🎉 Niju Server 話題の記事一覧</h1>
+                    
+                    <section class="article-list">
+                        
+                        <a href="element_farm.html" class="article-list-item">
+                            <div class="article-thumb">
+                                <img src="../images/haijin.jpg" alt="元素ファームサムネ">
+                            </div>
+                            <div class="article-info">
+                                <div class="article-title-list">
+                                    【ヤバい】元素ファーム、熱狂的なファンが発生ｗｗｗ みひろたまを求めるクリッカー中毒者たち
+                                </div>
+                                <div class="article-date">
+                                    2024年9月10日 20:20 | カテゴリ: 元素ファーム, 廃人
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="shuttlerun.html" class="article-list-item">
+                            <div class="article-thumb">
+                                <img src="../images/shuttlerun.png" alt="シャトルランサムネ">
+                            </div>
+                            <div class="article-info">
+                                <div class="article-title-list">
+                                    【悲報】シャトルラン、過疎化が止まらないｗｗｗｗ
+                                </div>
+                                <div class="article-date">
+                                    2024年9月8日 15:44 | カテゴリ: シャトルラン, 過疎
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="onigotsu.html" class="article-list-item">
+                            <div class="article-thumb">
+                                <img src="../images/gotsu_muzu.png" alt="鬼ごっこサムネ">
+                            </div>
+                            <div class="article-info">
+                                <div class="article-title-list">
+                                    【絶望】鬼ごっこ、難易度が高すぎるｗｗｗ 180秒覚醒の鬼から逃げ切る方法とは？
+                                </div>
+                                <div class="article-date">
+                                    2024年3月18日 18:05 | カテゴリ: 鬼ごつ
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="nitaku.html" class="article-list-item">
+                            <div class="article-thumb">
+                                <img src="../images/hige_ramen.jpg" alt="二択クイズサムネ">
+                            </div>
+                            <div class="article-info">
+                                <div class="article-title-list">
+                                    【速報】二択クイズが面白すぎる件ｗｗｗ 予想外の回答続出！
+                                </div>
+                                <div class="article-date">
+                                    2024年2月10日 12:00 | カテゴリ: 二択クイズ, 面白い
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="relay.html" class="article-list-item">
+                            <div class="article-thumb">
+                                <img src="../images/keihin.jpg" alt="リレー大会サムネ">
+                            </div>
+                            <div class="article-info">
+                                <div class="article-title-list">
+                                    【炎上】リレー大会の豪華賞品（笑）がショボすぎた件
+                                </div>
+                                <div class="article-date">
+                                    2023年11月5日 19:30 | カテゴリ: アスレリレー, 炎上
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <nav aria-label="Page navigation" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled"><a class="page-link" href="#">前へ</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">次へ</a></li>
+                            </ul>
+                        </nav>
+
+                    </section>
+                </main>
+                
+                <aside class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px;">
+                        
+                        <div class="sidebar-box rounded">
+                            <h4>カテゴリー</h4>
+                            <ul class="list-unstyled" style="padding: 15px 25px;">
+                                <li><a href="#">イベント (12)</a></li>
+                                <li><a href="#">企画 (15)</a></li>
+                                <li><a href="#">裏企画 (5)</a></li>
+                                <li><a href="#">運営要望 (15)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="text-center">
+                            <img src="../images/ad1.jpg" class="img-fluid" alt="広告">
+                        </div>
+                        
+                    </div>
+                </aside>
+            </div></div><footer class="footer d-flex flex-column align-items-center justify-content-center">
+                <h5 class="mb-3">Niju Server まとめ速報</h5>
+                <p class="small mb-0">Copyright &copy; 2026 Niju Server Matome. All Rights Reserved.</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>
