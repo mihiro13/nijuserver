@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>⛩️ 2026年 新春おみくじイベント 🐉</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+            rel="stylesheet">
+        <style>
+                /* ベースリセットとフォント設定 */
+        :root {
+            --color-primary: #f02435; /* イベントのメインカラー (朱色/オレンジ系) */
+            --color-secondary: #008080; /* アクセントカラー (ティール系) */
+            --color-background: #F8F8F8;
+            --color-hazure: #4b4e50;
+            --color-text: #333;
+            --font-jp: 'Noto Sans JP', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-jp);
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+        }
+
+        /* ヒーローセクション */
+        .hero-section {
+            background: linear-gradient(135deg, #f37c67 0%, var(--color-primary) 100%); /* グラデーション背景 */
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* 波打つようなモダンな切り抜き */
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .sub-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .catch-phrase {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .date-info {
+            margin-top: 20px;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--color-primary);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 共通セクションスタイル */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-container {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--color-primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-secondary);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* カードグリッド (概要) */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* 浮遊感を出すシャドウ */
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--color-secondary);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        /* 景品セクション */
+        .prize-section {
+            background-color: #302f2b;
+            color: white;
+            padding: 80px 20px;
+            margin: 40px 0;
+            border-radius: 15px;
+        }
+
+        .prize-section .section-title {
+            color: white;
+        }
+
+        .prize-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .prize-item {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: background-color 0.3s;
+        }
+
+        .prize-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .rank {
+            background-color: var(--color-primary);
+            padding: 15px 25px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rank.special {
+            background-color: var(--color-secondary);
+        }
+
+        .rank.hazure {
+            background-color: var(--color-hazure);
+        }
+
+        .description {
+            padding: 15px 25px;
+            flex-grow: 1;
+            font-size: 1.1rem;
+        }
+
+        /* ご注意セクション */
+        .attention-section {
+            background-color: white;
+            padding: 40px;
+            border-left: 5px solid var(--color-secondary);
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+
+        .attention-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .attention-section li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .attention-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        /* 最終CTAセクション */
+        .cta-section {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #FFFACD; /* 少し明るい色 */
+            border-radius: 15px;
+            margin-top: 60px;
+        }
+
+        .cta-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--color-primary);
+        }
+
+        .final-cta-button {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 69, 0, 0.4);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .final-cta-button:hover {
+            background-color: #CC3700;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255, 69, 0, 0.6);
+        }
+
+        .good-luck-text {
+            margin-top: 20px;
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #AAA;
+            font-size: 0.9rem;
+        }
+
+        /* レスポンシブ調整 */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 15px;
+            }
+            .main-title {
+                font-size: 2.5rem;
+            }
+            .catch-phrase {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .rank {
+                font-size: 1.1rem;
+                padding: 15px 15px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+
+        <header class="hero-section">
+            <div class="hero-content">
+                <p class="sub-title">Niju Serverで運試し！</p>
+                <h1 class="main-title">2026年 新春おみくじイベント</h1>
+                <p class="catch-phrase">お年玉が当たるチャンス！</p>
+                <p class="date-info">開催期間: 2026/1/1 9:00 - 1/3 20:00(予定)</p>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="section-container" id="overview">
+                <h2 class="section-title">イベント概要</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>📅 期間</h3>
+                        <p>2026年1月1日（金）9:00 〜 1月3日（木）20:00</p>
+                    </div>
+                    <div class="card">
+                        <h3>✅ 参加方法</h3>
+                        <p>期間中、Discordサーバーのイベントチャンネルで <b>/omikuji</b> コマンドを入力するだけ！</p>
+                    </div>
+                    <div class="card">
+                        <h3>🔑 参加条件</h3>
+                        <p>2025年12月31日（木）23:59 までにDiscordサーバーに参加している</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container prize-section" id="prizes">
+                <h2 class="section-title is-light">🎁 おみくじ内容</h2>
+                <div class="prize-list">
+                    <div class="prize-item">
+                        <div class="rank">🏆 大当たり</div>
+                        <div class="description">
+                            <b>1,000円分のポイント</b> ！！(5枚)
+                        </div>
+                    </div>
+                    <div class="prize-item">
+                        <div class="rank">🎉 当たり？</div>
+                        <div class="description">
+                            <b>かっこよすぎるロール</b>をプレゼント！(5枚)
+                        </div>
+                    </div>
+                    <div class="prize-item">
+                        <div class="rank">👍 もう一回！</div>
+                        <div class="description">
+                            おみくじを<b>もう一回</b>引けます！(9枚)
+                        </div>
+                    </div>
+                    <div class="prize-item">
+                        <div class="rank hazure">🗑️ はずれ</div>
+                        <div class="description">
+                            はずれです...(44枚)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container attention-section" id="notes">
+                <h2 class="section-title">⚠️ ご注意</h2>
+                <ul>
+                    <li>おみくじは原則<b>1人1回</b>となります。</li>
+                    <li>大当たりがすべて出なかった場合、別の企画の景品になります。</li>
+                    <li>景品の交換・返品はできません。</li>
+                    <li>夜間、おみくじBOTがオフラインになる可能性があります。</li>
+                </ul>
+            </section>
+
+            <section class="cta-section" id="participation">
+                <p class="cta-text">さあ、あなたの2026年の運勢は？</p>
+                <a class="final-cta-button" href="discord.gg/rypNPn2cHh">【サーバーに移動】</a>
+                <p class="good-luck-text">幸運を祈ります！</p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>2026 Niju Server</p>
+        </footer>
+
+    </body>
+</html>
